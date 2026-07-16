@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@layer components{
+   .task{
+     @apply flex flex-row justify-between gap-0 w-full mt-5 h-[8vh] px-5 py-2  text-white  bg-blue-950 shadow-2xl  border border-gray-400  text-2xl p-5  rounded-xl;
+    }
+    .task-text{
+      @apply text-3xl text-white ;
+    }
+    .done{
+      @apply w-7 h-[3vh] border rounded-[25%] border-gray-200 cursor-pointer;
+    }
+    .delete_btn {
+      @apply cursor-pointer  px-2 border rounded-xl bg-red-500 w-[20%] h-10  ;
+    }
+    .task-text-done{
+      @apply decoration-3 decoration-gray-700  line-through;
+    }
+.done_active{
+  @apply bg-white;
+}
+}
+
