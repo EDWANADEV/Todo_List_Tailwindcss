@@ -12,7 +12,7 @@ const btn = document.getElementById("btn");
     let lentgh = all_list.length;
 
     div.innerHTML += `<div> <span class="done text-blue-950">rrr</span>  </div>
-      <div>   <span class="task-text">${taskText}</span>  </div>
+      <div class="overflow-auto max-w-full text-white flex-1">   <span class="task-text ">${taskText}</span>  </div>
         <div> <span class="delete_btn">Delete</span> </div>`;
     const deleteBtn = div.querySelector(".delete_btn");
     deleteBtn.addEventListener("click", () => {
