@@ -46,6 +46,7 @@ document.querySelector("input").addEventListener("keydown", (e) =>{
                  
                 }
 })
-btn.addEventListener("click",
+btn.addEventListener("click",()=>{
   addtask()
+}
 )
