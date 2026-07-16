@@ -202,6 +202,9 @@
   .grid {
     display: grid;
   }
+  .table {
+    display: table;
+  }
   .h-\[6vh\] {
     height: 6vh;
   }
@@ -217,8 +220,20 @@
   .w-screen {
     width: 100vw;
   }
+  .max-w-full {
+    max-width: 100%;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-row {
     flex-direction: row;
@@ -228,6 +243,12 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .overflow-auto {
+    overflow: auto;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded {
     border-radius: 0.25rem;
@@ -285,6 +306,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .bg-blend-hue {
     background-blend-mode: hue;
   }
@@ -297,6 +321,10 @@
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, var(--color-blue-900) var(--tw-shadow-alpha), transparent);
     }
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .outline-none {
     --tw-outline-style: none;
@@ -311,7 +339,8 @@
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    gap: 0;
+    gap: calc(var(--spacing) * 4);
+    overflow: hidden;
     border-radius: var(--radius-xl);
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -329,7 +358,6 @@
   .task-text {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
-    color: var(--color-white);
   }
   .done {
     height: 3vh;
@@ -433,6 +461,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -452,6 +485,7 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
     }
   }
 }

@@ -1,10 +1,11 @@
 @import "tailwindcss";
+
 @layer components{
    .task{
-     @apply flex flex-row justify-between gap-0 w-full mt-5 h-[8vh] px-5 py-2  text-white  bg-blue-950 shadow-2xl  border border-gray-400  text-2xl p-5  rounded-xl;
+     @apply flex flex-row justify-between gap-4 overflow-hidden w-full mt-5 h-[8vh] px-5 py-2  text-white  bg-blue-950 shadow-2xl  border border-gray-400  text-2xl p-5  rounded-xl;
     }
-    .task-text{
-      @apply text-3xl text-white ;
+    .task-text {
+      @apply text-3xl;
     }
     .done{
       @apply w-7 h-[3vh] border rounded-[25%] border-gray-200 cursor-pointer;
